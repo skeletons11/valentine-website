@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary 💖</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?valentine,love,romantic') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(255, 182, 193, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .button {
+            background: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #ff58b1;
+        }
+        .image-container, .video-container, .flower-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .image-container img, .flower-container img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .video-container video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Anniversary! ❤️</h1>
+        <p>Thank you for always being by my side. Love you so much! 💕</p>
+        <button class="button" onclick="showContent()">Click to see surprises</button>
+        <div class="image-container" id="imageGallery">
+            <img src="1.png" alt="Love Image 1">
+            <img src="2.png" alt="Love Image 2">
+            <img src="3.png" alt="Love Image 3">
+            <img src="4.png" alt="Love Image 4">
+        </div>
+        <div class="video-container" id="videoSection">
+            <video controls>
+                <source src="5.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="flower-container" id="flowerGallery">
+            <img src="5.png" alt="Flower Image 1">
+            <p class="text">Flowers for You 🌸</p>
+        </div>
+    </div>
+    <script>
+        function showContent() {
+            document.getElementById('imageGallery').style.display = 'block';
+            document.getElementById('videoSection').style.display = 'block';
+            document.getElementById('flowerGallery').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
