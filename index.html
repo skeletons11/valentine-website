@@ -62,15 +62,18 @@
         <h1>Happy Anniversary! ❤️</h1>
         <p>Thank you for always being by my side. Love you so much! 💕</p>
         <p>Happy Valentine's Day to the most special person in my life. You are my love</p>
-        <button class="button" onclick="showContent()">Click to see surprises</button>
+        <button class="button" onclick="toggleContent()">Click to see surprises</button>
         <div class="image-container" id="imageGallery">
             <img src="1.png" alt="Love Image 1">
+            <p>หัวใจให้แฟนพี่ๆ</p>
             <img src="2.png" alt="Love Image 2">
+            <p>อันนี้รูปหมูสองเด้งกับแมวเด้ง</p>
             <img src="3.png" alt="Love Image 3">
+            <p>รูปคู่สุดพิเศษ</p>
             <img src="4.png" alt="Love Image 4">
         </div>
         <div class="video-container" id="videoSection">
-            <video controls>
+            <video autoplay muted loop controls>
                 <source src="5.mp4" type="video/mp4">
             </video>
         </div>
@@ -80,10 +83,24 @@
         </div>
     </div>
     <script>
-        function showContent() {
-            document.getElementById('imageGallery').style.display = 'block';
-            document.getElementById('videoSection').style.display = 'block';
-            document.getElementById('flowerGallery').style.display = 'block';
+        function toggleContent() {
+            let imageGallery = document.getElementById('imageGallery');
+            let videoSection = document.getElementById('videoSection');
+            let flowerGallery = document.getElementById('flowerGallery');
+            let video = document.querySelector("#videoSection video");
+
+            // เช็คว่าตอนนี้แสดงอยู่หรือไม่
+            if (imageGallery.style.display === 'block') {
+                imageGallery.style.display = 'none';
+                videoSection.style.display = 'none';
+                flowerGallery.style.display = 'none';
+                video.pause(); // หยุดวิดีโอเมื่อปิด
+            } else {
+                imageGallery.style.display = 'block';
+                videoSection.style.display = 'block';
+                flowerGallery.style.display = 'block';
+                video.play(); // เล่นวิดีโอเมื่อเปิด
+            }
         }
     </script>
 </body>
